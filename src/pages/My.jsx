@@ -26,13 +26,32 @@ const My = () => {
 
        </div>
       <div className='p-5 pb-52 -mt-20'>
-         <div className='bg-white w-full flex min-h-32 rounded-xl shadow-lg text-[#333] text-sm p-5'>
-              <div className='w-1/2 border-r'>
-                 <div><button>Withdraw</button></div>
+         <div className='bg-white w-full flex flex-col min-h-32 rounded-xl shadow-lg text-[#333] text-sm px-3 pt-2'>
+              {/* <div className='w-1/2 border-r'>
+                  <div className='flex items-center text-black'><strong className=''>Amount</strong> <span>203</span></div>
+                  <div className=''><button className='bg-'>Withdraw</button></div>
               </div>
               <div className='w-1/2l'>
               <div><button>Recharge</button></div>
-              </div>
+              </div> */}
+                <span>Frequently used</span>
+                <div className='flex p-5'>
+                    <div className='w-1/4 flex flex-col items-center'>
+                    {/* <i className="fa-solid fa-wallet"></i> */}
+                       <div className='bg-[#ff7cbe] h-10 w-10 rounded-lg z-20 shadow-sm flex items-center justify-center'><i className="fa fa-piggy-bank text-white text-xl"></i></div>
+                      <div>Recharge</div>
+                    </div>
+                    <div className='w-1/4 flex flex-col items-center'>
+                    <div className='bg-[#60cfff] h-10 w-10 rounded-lg z-20 shadow-sm flex items-center justify-center'> <i className="fa-sharp fa-solid fa-building-columns text-xl"></i></div>
+                      <div>Withdraw</div>
+                    </div>
+                    <div className='w-1/4 flex flex-col items-center'>
+                    <i className="fa-solid fa-money-bill-trend-up"></i>
+                    </div>
+                    <div className='w-1/4 flex flex-col items-center'>
+                    <i className="fa-solid fa-people-group"></i>
+                    </div>
+                </div>
          </div>
 
          <div className='bg-white w-full min-h-64 rounded-xl shadow-lg text-[#333] text-sm mt-5'>
