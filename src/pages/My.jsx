@@ -8,16 +8,24 @@ import INR from '../assets/INR.svg'
 const My = () => {
   const [isToast, setIsToast] = useState(false)
 
+  const [isRotating, setIsRotating] = useState(false);
+
+  const handleRefresh = () => {
+    setIsRotating(true);
+
+    setTimeout(() => {
+      setIsRotating(false);
+      // Place your refresh logic here
+    }, 1000); // Duration of the animation
+  };
+
   const handleCopy =()=>{
     setIsToast(true)
     setTimeout(()=>{
       setIsToast(false)
-    },1000)
+    },2000)
  }
 
- const handleRefresh =()=>{
-
- }
   return (
     <>
     <div>
@@ -29,7 +37,7 @@ const My = () => {
           <div className='ms-3 text-black text-lg font-bold flex items-center'>
              <span >7905321205</span>
              {/* <span >VIP 1</span> */}
-             <i className='fa fa-copy px-3 cursor-pointer z-30' onClick={handleCopy}></i>
+             <i className='fa-regular fa-copy px-3 cursor-pointer text-base text-slate-700 z-30' onClick={handleCopy}></i>
              {isToast && <div className='text-base font-normal bg-gray-400 px-3 py-0.5 rounded-3xl -ml-16 -mt-14 text-white'>Copied</div>}
           </div>
 
@@ -55,7 +63,7 @@ const My = () => {
                   <div className='w-1/6 h-full pl-3'>
                       <div className='p-[10px_15px] flex justify-center h-full bg-[#b7d0ff] rounded-tr-[.625rem] rounded-br-[.625rem]' onClick={handleRefresh}>
                         <div className='flex items-center cursor-pointer'>
-                          <i className="fa fa-arrows-rotate text-lg"></i>
+                          <i className={`fa fa-arrows-rotate text-lg ${isRotating ? 'rotating' : ''}`}></i>
                         </div>
                       </div>
                   </div>
