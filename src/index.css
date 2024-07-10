@@ -12,14 +12,22 @@
   }
 
   @media (max-width: 767px){
-  
     body {
       width: 100%;
     }
- 
+  
+  }
+  @media (max-width: 370px){
+    body {
+      width: 370px;
+    }
   
   }
   
+}
+
+::-webkit-scrollbar{
+  width: 0;
 }
 
 .slick-slide{
