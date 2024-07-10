@@ -14,14 +14,15 @@ const Home = () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoPlay:true,
-        autoPlaySpeed:1000,
+        autoplay: true, // Changed from autoPlay to autoplay
+        autoplaySpeed: 3000,
+        arrows: false,
       };
       
   return (
    <>
-    <div className="slider-container p-2 mt-5">
-      <Slider {...settings} className="shadow-lg rounded-lg ">
+    <div className="slider-container p-2 pt-5">
+      <Slider {...settings} className="bg-white shadow-lg rounded-lg ">
         <div>
            <img src="" alt="" srcSet={Banner} className="rounded-lg"/>
         </div>

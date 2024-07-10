@@ -7,6 +7,17 @@
   body{
     width: 480px;
     margin: auto;
+    overflow: auto;
+    overflow-x: hidden;
+  }
+
+  @media (max-width: 767px){
+  
+    body {
+      width: 100%;
+    }
+ 
+  
   }
   
 }
