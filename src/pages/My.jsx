@@ -1,20 +1,34 @@
-import React from 'react'
-import { FaAngleLeft, FaList } from 'react-icons/fa'
 import { FaAngleRight } from 'react-icons/fa6'
 import BottomNavigation from '../Components/BottomNavigation'
+import VIP from '../assets/VIP.webp'
+import Avatar from '../assets/avatar.webp'
 
 const My = () => {
   return (
     <>
     <div>
        <div className='bg-slate-300 w-full min-h-56'>
-         <div className='p-10'>
-         <div className='bg-orange-100 h-16 w-16 rounded-full shadow-sm'></div>
+         <div className='p-5 pt-10 flex items-center'>
+         <div className='bg-orange-100 h-16 w-16 rounded-full shadow-sm flex items-center justify-center'>
+          <img src={Avatar} width={100} alt="user" className='rounded-full'/>
+         </div>
+          
+          <div className='ms-5 text-black text-lg font-bold'>7905321205</div>
+
+          <div className='absolute w-[150px] right-5'>
+            <img src="" alt="" srcSet={VIP} />
+          </div>
+
          </div>
 
        </div>
       <div className='p-5 pb-52 -mt-20'>
-         <div className='bg-white w-full min-h-32 rounded-xl shadow-lg text-[#333] text-sm'></div>
+         <div className='bg-white w-full flex min-h-32 rounded-xl shadow-lg text-[#333] text-sm p-5'>
+              <div className='w-1/2 border-r'>
+                 <div><button>Withdraw</button></div>
+              </div>
+              <div className='w-1/2l'></div>
+         </div>
 
          <div className='bg-white w-full min-h-64 rounded-xl shadow-lg text-[#333] text-sm mt-5'>
              <div className='flex justify-between items-center p-4 px-5'>
@@ -68,7 +82,7 @@ const My = () => {
              <div className='mx-[30px] border-b'></div>
          </div>
          
-         <div className=''></div>
+         {/* <div className=''></div> */}
       </div>
 
    </div>
