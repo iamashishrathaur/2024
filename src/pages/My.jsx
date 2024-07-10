@@ -1,4 +1,4 @@
-import { FaAngleRight } from 'react-icons/fa6'
+import { FaAngleRight, FaMobileScreen, FaUnlockKeyhole } from 'react-icons/fa6'
 import BottomNavigation from '../Components/BottomNavigation'
 import VIP from '../assets/VIP.webp'
 import Avatar from '../assets/avatar.webp'
@@ -12,10 +12,13 @@ const My = () => {
          <div className='bg-orange-100 h-16 w-16 rounded-full shadow-sm flex items-center justify-center'>
           <img src={Avatar} width={100} alt="user" className='rounded-full'/>
          </div>
-          
-          <div className='ms-5 text-black text-lg font-bold'>7905321205</div>
+          <div className='ms-3 text-black text-lg font-bold flex items-center'>
+             <span >7905321205</span>
+             {/* <span >VIP 1</span> */}
+             <i className='fa fa-copy px-3 cursor-pointer'></i>
+          </div>
 
-          <div className='absolute w-[150px] right-5'>
+          <div className='absolute w-[150px] right-4'>
             <img src="" alt="" srcSet={VIP} />
           </div>
 
@@ -27,7 +30,9 @@ const My = () => {
               <div className='w-1/2 border-r'>
                  <div><button>Withdraw</button></div>
               </div>
-              <div className='w-1/2l'></div>
+              <div className='w-1/2l'>
+              <div><button>Recharge</button></div>
+              </div>
          </div>
 
          <div className='bg-white w-full min-h-64 rounded-xl shadow-lg text-[#333] text-sm mt-5'>
@@ -61,14 +66,24 @@ const My = () => {
              <div className='mx-[30px] border-b'></div>
              <div className='flex justify-between items-center p-4 px-5'>
                <div className='flex items-center'>
-                 <i className="fas fa-lock text-fuchsia-400 text-xl"> </i> <span className='ml-4'>Password</span>
+                 <i className="fas fa-mobile-screen text-emerald-400 text-xl"> </i> <span className='ml-4'>Download APP</span>
+               </div>
+               <div><FaAngleRight/></div>
+             </div>
+    
+             {/* Download APP */}
+             <div className='mx-[30px] border-b'></div>
+             <div className='flex justify-between items-center p-4 px-5'>
+               <div className='flex items-center'>
+                  {/* <FaUnlockKeyhole */}
+                 <i className="fas fa-unlock-keyhole text-fuchsia-400 text-xl"> </i> <span className='ml-4'>Password</span>
                </div>
                <div><FaAngleRight/></div>
              </div>
              <div className='mx-[30px] border-b'></div>
              <div className='flex justify-between items-center p-4 px-5'>
                <div className='flex items-center'>
-                 <i className="fas fa-shield text-red-400 text-xl"> </i> <span className='ml-4'>Withdraw Password</span>
+                 <i className="fas fa-shield-halved text-red-400 text-xl"> </i> <span className='ml-4'>Withdraw Password</span>
                </div>
                <div><FaAngleRight/></div>
              </div>
@@ -82,7 +97,6 @@ const My = () => {
              <div className='mx-[30px] border-b'></div>
          </div>
          
-         {/* <div className=''></div> */}
       </div>
 
    </div>
