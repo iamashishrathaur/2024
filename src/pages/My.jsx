@@ -7,7 +7,13 @@ const My = () => {
   return (
     <>
     <div>
-      <div className='p-5 pb-52'>
+       <div className='bg-slate-300 w-full min-h-56'>
+         <div className='p-10'>
+         <div className='bg-orange-100 h-16 w-16 rounded-full shadow-sm'></div>
+         </div>
+
+       </div>
+      <div className='p-5 pb-52 -mt-20'>
          <div className='bg-white w-full min-h-32 rounded-xl shadow-lg text-[#333] text-sm'></div>
 
          <div className='bg-white w-full min-h-64 rounded-xl shadow-lg text-[#333] text-sm mt-5'>
