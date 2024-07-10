@@ -6,7 +6,7 @@ const BottomNavigation = () => {
   const navigate = useNavigate()
 
   return (
-   <div className='fixed w-full px-7 bottom-4 left-1/2 z-50 min-h-17 max-w-lg -translate-x-1/2'>
+   <div className='fixed w-full px-3 bottom-4 left-1/2 z-50 min-h-17 max-w-lg -translate-x-1/2'>
     <div className="h-16 w-full bg-white shadow-2xl z-50 rounded-full">
     <div className="grid h-full max-w-lg grid-cols-5 mx-auto">
     <button
