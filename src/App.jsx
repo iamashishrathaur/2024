@@ -4,6 +4,8 @@ import BottomNavigation from './Components/BottomNavigation'
 import Header from './Components/Header'
 import Home from './pages/Home'
 import Products from './pages/Products'
+import My from './pages/My'
+import ChatBot from './Components/ChatBot'
 
 function App() {
 
@@ -16,15 +18,21 @@ function App() {
       element:<Products/>,
       path:'/products'
     },
+    {
+      element:<My/>,
+      path:'/my'
+    },
 
   ])
 
   return (
+    <>
     <div className='bg-slate-50 min-h-screen relative'>
-      {/* <Header/> */}
-      {/* <Products/> */}
       <RouterProvider router={routes}/>
     </div>
+    <ChatBot/>
+    </>
+
   )
 }
 
