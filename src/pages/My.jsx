@@ -34,22 +34,24 @@ const My = () => {
               <div className='w-1/2l'>
               <div><button>Recharge</button></div>
               </div> */}
-                <span>Frequently used</span>
-                <div className='flex p-5'>
+                <span className='text-base text-black'>Frequently used</span>
+                <div className='flex pt-5 text-xs font-medium'>
                     <div className='w-1/4 flex flex-col items-center'>
                     {/* <i className="fa-solid fa-wallet"></i> */}
                        <div className='bg-[#ff7cbe] h-10 w-10 rounded-lg z-20 shadow-sm flex items-center justify-center'><i className="fa fa-piggy-bank text-white text-xl"></i></div>
-                      <div>Recharge</div>
+                       <div className='mt-1'>Recharge</div>
                     </div>
                     <div className='w-1/4 flex flex-col items-center'>
-                    <div className='bg-[#60cfff] h-10 w-10 rounded-lg z-20 shadow-sm flex items-center justify-center'> <i className="fa-sharp fa-solid fa-building-columns text-xl"></i></div>
-                      <div>Withdraw</div>
+                    <div className='bg-[#60cfff] h-10 w-10 rounded-lg z-20 shadow-sm flex items-center justify-center'> <i className="fa-sharp fa-solid fa-building-columns text-white text-xl"></i></div>
+                      <div className='mt-1'>Withdraw</div>
                     </div>
                     <div className='w-1/4 flex flex-col items-center'>
-                    <i className="fa-solid fa-money-bill-trend-up"></i>
+                    <div className='bg-[#fdb953] h-10 w-10 rounded-lg z-20 shadow-sm flex items-center justify-center'> <i className="fa-solid fa-money-bill-trend-up text-white text-xl"></i></div>
+                    <div className='mt-1'>Transaction</div>
                     </div>
                     <div className='w-1/4 flex flex-col items-center'>
-                    <i className="fa-solid fa-people-group"></i>
+                    <div className='bg-[#5dffe9] h-10 w-10 rounded-lg z-20 shadow-sm flex items-center justify-center'><i className="fa-solid fa-people-group text-white text-xl"></i></div>
+                    <div className='mt-1'>Team</div>
                     </div>
                 </div>
          </div>
