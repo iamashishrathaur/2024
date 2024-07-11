@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Products from "./Products";
 import BottomNavigation from "../Components/BottomNavigation";
+import WeaklyIncome from "../Components/WeaklyIncome";
 
 const Home = () => {
 
@@ -21,7 +22,10 @@ const Home = () => {
       
   return (
    <>
-    <div className="slider-container p-2 pt-5">
+     {/* <div className="text-xl font-bold">Dashboard</div> */}
+    <div className="p-3 pt-5">
+       <WeaklyIncome/>
+
       <Slider {...settings} className="bg-white shadow-lg rounded-lg ">
         <div>
            <img src="" alt="" srcSet={Banner} className="rounded-lg"/>

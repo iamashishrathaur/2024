@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Earnings</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f5f5f5;
+        }
+        .card {
+            background: linear-gradient(135deg, rgba(127, 0, 255, 0.9), rgba(225, 0, 255, 0.9));
+            border-radius: 20px;
+            color: white;
+            width: 350px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            backdrop-filter: blur(10px); /* Ensure shadow is applied correctly */
+        }
+        .card .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card .info .title {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .card .info .amount {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .bars {
+            display: flex;
+            align-items: flex-end;
+            height: 100px;
+            gap: 5px;
+        }
+        .bars .bar {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            width: 10px;
+            height: 50%;
+            position: relative;
+        }
+        .bars .bar::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            border-radius: 5px;
+            height: 50%;
+        }
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .profile img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .profile .button {
+            background: #ffd3ba;
+            border-radius: 10px;
+            padding: 5px 20px;
+            color: #ff5a00;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="info">
+            <div class="title">Weekly Earnings</div>
+            <div class="amount">$ 8,120.09</div>
+            <div class="bars">
+                <div class="bar" style="height: 20%;"></div>
+                <div class="bar" style="height: 40%;"></div>
+                <div class="bar" style="height: 60%;"></div>
+                <div class="bar" style="height: 80%;"></div>
+                <div class="bar" style="height: 100%;"></div>
+                <div class="bar" style="height: 50%;"></div>
+            </div>
+        </div>
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile Picture">
+            <div class="button">Profile</div>
+        </div>
+    </div>
+</body>
+</html>
