@@ -1,4 +1,4 @@
-import { FaAngleDown, FaAngleRight, FaArrowDown } from 'react-icons/fa6'
+import { FaAngleRight} from 'react-icons/fa6'
 import BottomNavigation from '../Components/BottomNavigation'
 import VIP from '../assets/VIP.webp'
 import Avatar from '../assets/avatar.webp'
