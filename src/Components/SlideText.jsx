@@ -4,9 +4,7 @@ import Scrolling from '../assets/scrolling.webp'
 const SlideText = () => {
   return (
     <div
-  data-v-eaa9db12=""
-  data-v-41c0bf48=""
-  className="md:text-pc-sz text-mobile-sz flex items-center justify-center w-full h-[27px] md:h-10 rounded-btn bg-marquee mt-[10px] md:mt-5 relative border bg-[#161c30] rounded-3xl"
+  className="md:text-pc-sz text-mobile-sz flex items-center justify-center w-full h-[40px] md:h-10 rounded-btn bg-marquee mt-[10px] md:mt-5 relative border bg-[#161c30] rounded-3xl"
 >
   <div className="flex items-center justify-between w-full">
     <div>
