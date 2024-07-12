@@ -1,4 +1,5 @@
 import React from 'react'
+import Avatar from '../assets/avatar.webp'
 
 const WeaklyIncome = () => {
   return (
@@ -16,7 +17,7 @@ const WeaklyIncome = () => {
     </div>
   </div>
   <div className="flex flex-col items-center h-full w-auto bg-white p-4 rounded-2xl relative">
-    <img src="" className='w-14 h-14 p-6 rounded-full mb-[10px] bg-slate-300'/>
+    <img src={Avatar} width={100} className='w-14 h-14 rounded-full mb-[10px] bg-slate-300'/>
     <div className="bg-[#FFF3EA] cursor-pointer text-[#ff5a00] rounded-lg p-[5px_20px] text-center mt-3">Profile</div>
   </div>
 </div>

@@ -13,7 +13,7 @@ const SlideText = () => {
             alt="scrollingImg"
           />
         </div>
-        <div className="relative flex items-center w-full overflow-hidden h-6 cursor-pointer text-white">
+        <div className="relative flex items-center w-full overflow-hidden h-6 cursor-pointer text-white text-base">
           <Marquee pauseOnHover={true} speed={50} gradient={false} delay={1}>
             <p className="inline-flex mr-20">
               <strong className="px-[5px]">🔊 🔊 🔊 Sapphire Betting </strong> has been fully updated and renamed to <strong className="px-[5px]"> BharatWin</strong>! A new experience and generous rewards await you!
