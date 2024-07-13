@@ -1,19 +1,19 @@
-import React from 'react'
 import Avatar from '../assets/avatar.webp'
 
 const WeaklyIncome = () => {
   return (
-    <div className="rounded-[20px] text-white flex w-full h-[200px] justify-between relative backdrop-blur-md p-7" style={{background:'linear-gradient(135deg, rgba(127, 0, 255, 0.9), rgba(225, 0, 255, 0.9))'}}>
+    <div className="rounded-[20px] text-white flex w-full h-[240px] justify-between relative backdrop-blur-md p-7 shadow-lg" style={{background:'linear-gradient(135deg, rgba(127, 0, 255, 0.9), rgba(225, 0, 255, 0.9))'}}>
     <div className="flex flex-col justify-between">
-    <div className="text-lg mb-3">Total Earnings</div>
-    <div className="text-3xl mb-5">₹ 8,120.09</div>
-    <div className="flex items-end h-[100px] gap-1">
-      <div className="bar" style={{ height: "20%" }} />
-      <div className="bar" style={{ height: "40%" }} />
-      <div className="bar" style={{ height: "60%" }} />
-      <div className="bar" style={{ height: "80%" }} />
-      <div className="bar" style={{ height: "100%" }} />
-      <div className="bar" style={{ height: "50%" }} />
+    <div className="text-lg -mt-1 mb-2">Total Earnings</div>
+    <div className="text-3xl mb-6 font-semibold">₹ 8,120.09</div>
+    <div className="flex items-end h-[100px]">
+            <div className="h-24 w-2 bg-white bg-opacity-50 gap-1 rounded-t-full rounded-b-full mr-8 relative bar after:h-[10%]"></div>
+            <div className="h-24 w-2 bg-white bg-opacity-50 gap-1 rounded-t-full rounded-b-full mr-8 relative bar after:h-[30%]"></div>
+            <div className="h-24 w-2 bg-white bg-opacity-50 gap-1 rounded-t-full rounded-b-full mr-8 relative bar after:h-[70%]"></div>
+            <div className="h-24 w-2 bg-white bg-opacity-50 gap-1 rounded-t-full rounded-b-full mr-8 relative bar after:h-[60%]"></div>
+            <div className="h-24 w-2 bg-white bg-opacity-50 gap-1 rounded-t-full rounded-b-full mr-8 relative bar after:h-[100%]"></div>
+            <div className="h-24 w-2 bg-white bg-opacity-50 gap-1 rounded-t-full rounded-b-full mr-8 relative bar after:h-[20%]"></div>
+            <div className="h-24 w-2 bg-white bg-opacity-50 gap-1 rounded-t-full rounded-b-full mr-8 relative bar after:h-[40%]"></div>
     </div>
   </div>
   <div className="flex flex-col items-center h-full w-auto bg-white p-4 rounded-2xl relative">

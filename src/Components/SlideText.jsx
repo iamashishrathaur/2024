@@ -4,7 +4,7 @@ import Marquee from 'react-fast-marquee';
 
 const SlideText = () => {
   return (
-    <div className="flex items-center justify-center w-full h-[40px] mt-[10px] relative border bg-[#161c30] rounded-3xl">
+    <div className="flex items-center justify-center w-full h-[40px] mt-[10px] relative border bg-[#161c30] rounded-3xl shadow-lg">
       <div className="flex items-center justify-between w-full">
         <div>
           <img

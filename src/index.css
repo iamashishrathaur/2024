@@ -66,3 +66,14 @@
   animation-delay: 0ms;
 }
 
+.bar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 18px;
+  height: 50%;
+}
+
