@@ -16,9 +16,15 @@
     font-family:'Roboto',sans-serif;
   }
 
-  @media (max-width: 767px){
+  @media (max-width: 768px){
     body {
       width: 100%;
+      overflow: -moz-scrollbars-none; /* For Firefox */
+     -ms-overflow-style: none; 
+    }
+   /* For Chrome, Safari, and Opera */
+    body::-webkit-scrollbar {      
+      display: none;
     }
   
   }
