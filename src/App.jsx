@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-    <div className='bg-slate-50 min-h-screen relative'>
+    <div className='bg-slate-50 relative scrollable-container'>
       <RouterProvider router={routes}/>
     </div>
     <ChatBot/>
