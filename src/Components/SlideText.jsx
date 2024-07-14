@@ -16,7 +16,7 @@ const SlideText = () => {
         <div className="relative flex items-center w-full overflow-hidden h-6 cursor-pointer text-white text-base">
           <Marquee pauseOnHover={true} speed={50} gradient={false} delay={1}>
             <p className="inline-flex mr-20">
-              <strong className="px-[5px]">🔊 🔊 🔊 Sapphire Betting </strong> has been fully updated and renamed to <strong className="px-[5px]"> BharatWin</strong>! A new experience and generous rewards await you!
+              <strong className="px-[5px]">🔊 🔊 🔊 Sapphire Betting </strong> has been fully updated and renamed to <strong className="px-[5px]"> RelincePay</strong>! A new experience and generous rewards await you!
             </p>
             <p className="inline-flex mr-20">
               🔊 🔊 🔊 Recharge cashback event is in full swing. Deposit using <strong className="px-[5px]"> USDT Pay </strong> and get an instant <strong className="px-[5px]">0.5%</strong> cashback.
