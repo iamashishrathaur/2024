@@ -20,7 +20,7 @@ const WeaklyIncome = () => {
     <circle cx="40" cy="40" r={radius} stroke="rgba(255, 255, 255, 0.5)" strokeWidth="6" fill="none" />
     <circle cx="40" cy="40" r={radius} stroke="white" strokeWidth="6" fill="none" strokeDasharray={circumference} strokeDashoffset={strokeDashoffset} className="transition-stroke-dashoffset duration-500" strokeLinecap="round" />
         </svg>
-        <i className="fa fa-fire absolute text-white"></i>
+        <i className="fa fa-fire absolute text-white text-xl"></i>
       </div>
   </div>
   <div className="flex flex-col items-center h-full w-auto bg-white p-4 rounded-2xl relative">

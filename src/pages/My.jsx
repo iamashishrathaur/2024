@@ -48,7 +48,7 @@ const My = () => {
 
          </div>
        </div>
-      <div className='p-5 pb-52 -mt-[108px]'>
+      <div className='p-5 pb-60 -mt-[108px]'>
          <div className='bg-white w-full flex flex-col min-h-52 rounded-xl shadow-lg text-[#333] text-sm px-3 pt-2'>
               {/* <FaAngleDown/> */}
               <div className='border rounded-[.625rem] py-[10] flex justify-between relative items-center cursor-pointer h-[39px] my-4' >
@@ -146,7 +146,7 @@ const My = () => {
              <div className='mx-[30px] border-b'></div>
              <div className='flex justify-between items-center p-4 px-5'>
                <div className='flex items-center'>
-                 <i className="fas fa-clipboard-list text-green-400 text-xl"> </i> <span className='ml-4'>Logout</span>
+                 <i className="fas fa-circle-info text-green-400 text-xl"> </i> <span className='ml-4'>About Us</span>
                </div>
                <div><FaAngleRight color='#333'/></div>
              </div>

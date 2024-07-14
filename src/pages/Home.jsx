@@ -5,18 +5,19 @@ import WeaklyIncome from "../Components/WeaklyIncome";
 import SlideText from "../Components/SlideText";
 import Promotion from "../Components/Promotion";
 import UsesTools from "../Components/UsesTools";
+import Charts from "../Components/Charts";
 
 const Home = () => {
 
       
   return (
    <>
-    <div className="p-3 pt-5 bg-white pb-52">
+    <div className="p-3 pt-5 bg-white pb-60">
        <WeaklyIncome/>
        <SlideText/>
        <Promotion/>
        <UsesTools/>
-
+       {/* <Charts/> */}
     </div>
     <BottomNavigation/>
    </>

@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Products from './pages/Products'
 import My from './pages/My'
 import ChatBot from './Components/ChatBot'
+import ChatbotPopup from './Components/ChatbotPopup'
 
 function App() {
 
@@ -30,7 +31,7 @@ function App() {
     <div className='bg-slate-50 relative scrollable-container'>
       <RouterProvider router={routes}/>
     </div>
-    <ChatBot/>
+    <ChatbotPopup/>
     </>
 
   )
