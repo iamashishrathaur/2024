@@ -2,7 +2,7 @@ import Avatar from '../assets/avatar.webp'
 
 const WeaklyIncome = () => {
   return (
-    <div className="rounded-[20px] text-white flex w-full h-[200px] justify-between relative backdrop-blur-md p-7 shadow-lg" style={{background:'linear-gradient(135deg, rgba(127, 0, 255, 0.9), rgba(225, 0, 255, 0.9))'}}>
+    <div className="rounded-[20px] text-white flex w-full h-[200px] justify-between relative backdrop-blur-md p-7 shadow-lg" style={{background:'linear-gradient(135deg,rgb(0, 0, 255), rgba(127, 0, 255, 0.9), rgba(225, 0, 255, 0.9))'}}>
     <div className="flex flex-col ">
     <div className="text-lg -mt-1 mb-3">Total Earnings</div>
     <div className="text-3xl font-extrabold">₹ 8,120.09</div>
