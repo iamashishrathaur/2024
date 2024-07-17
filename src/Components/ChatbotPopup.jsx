@@ -14,6 +14,12 @@ const ChatbotPopup = () => {
       setInput('');
     }
   };
+  const handleKeyUp = (event) => {
+    if (event.key === 'Enter') {
+      handleSendMessage();
+    }
+  };
+
 
 
   const handleImageUpload = (event) => {
@@ -49,7 +55,7 @@ const ChatbotPopup = () => {
               <label htmlFor="imageUpload" className="pl-2 pr-2 cursor-pointer">
                 <i className="fa fa-paperclip text-gray-500"></i>
               </label>
-              <input type="text" value={input} onChange={(e) => setInput(e.target.value)} className="flex outline-none border-none" placeholder="Type a message..." />
+              <input type="text" value={input} onChange={(e) => setInput(e.target.value)} onKeyUp={handleKeyUp} className="flex outline-none border-none" placeholder="Type a message..." />
               <i className="fa-regular fa-paper-plane p-2 cursor-pointer" onClick={handleSendMessage}></i>
             </div>
           </div>

@@ -21,7 +21,7 @@ const Chat = ({ messages }) => {
 
 
   return (
-    <div className="w-full p-4">
+    <div className="w-full ">
       {messages.map((message, index) => (
         <div
           key={index}
