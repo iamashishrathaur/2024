@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import ChatBot from './ChatBot';
 import Chat from './Chat';
+import 'boxicons'
+
 
 const ChatbotPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -56,7 +58,8 @@ const ChatbotPopup = () => {
                 <i className="fa fa-paperclip text-gray-500"></i>
               </label>
               <input type="text" value={input} onChange={(e) => setInput(e.target.value)} onKeyUp={handleKeyUp} className="flex outline-none border-none" placeholder="Type a message..." />
-              <i className="fa-regular fa-paper-plane p-2 cursor-pointer" onClick={handleSendMessage}></i>
+              <div className='cursor-pointer flex'><box-icon name='send' color='rgb(107 114 128)' size='22px' style={{ color: 'blue',}}  onClick={handleSendMessage}></box-icon></div>
+              {/* <i className="fa-regular fa-paper-plane p-2 cursor-pointer" onClick={handleSendMessage}></i> */}
             </div>
           </div>
         </div>

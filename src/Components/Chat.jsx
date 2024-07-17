@@ -25,7 +25,7 @@ const Chat = ({ messages }) => {
       {messages.map((message, index) => (
         <div
           key={index}
-          className={`mb-2 flex ${
+          className={`mb-3 flex ${
             message.sender === 'me' ? 'justify-end' : 'justify-start'
           }`}
         >
