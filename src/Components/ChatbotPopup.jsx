@@ -30,7 +30,7 @@ const ChatbotPopup = () => {
   return (
     <div className="fixed bottom-24 right-4 z-[9999]">
       {isOpen ? (
-        <div className="w-80 min-h-[450px] max-h-[550px] bg-white shadow-lg rounded-lg flex flex-col">
+        <div className=" w-[350px] h-[500px] bg-white shadow-lg rounded-lg flex flex-col">
           <div className="bg-blue-500 text-white p-4 flex justify-between items-center rounded-t-lg">
             <h3 className="text-lg">Chatbot</h3>
             <button
