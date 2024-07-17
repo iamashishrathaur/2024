@@ -44,12 +44,12 @@ const ChatbotPopup = () => {
             <Chat key={messages} messages={messages}/>
           </div>
           <div className="p-4 w-full flex items-center justify-center">
-            <div className='flex w-full items-center p-2 border border-gray-300 rounded-3xl'>
+            <div className='flex w-full items-center p-2 border border-gray-300 rounded-3xl justify-between'>
               <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" id="imageUpload"/>
-              <label htmlFor="imageUpload" className="pl-2 pr-4 cursor-pointer">
+              <label htmlFor="imageUpload" className="pl-2 pr-2 cursor-pointer">
                 <i className="fa fa-paperclip text-gray-500"></i>
               </label>
-              <input type="text" value={input} onChange={(e) => setInput(e.target.value)} className="flex-grow outline-none border-none pr-1" placeholder="Type a message..." />
+              <input type="text" value={input} onChange={(e) => setInput(e.target.value)} className="flex outline-none border-none" placeholder="Type a message..." />
               <i className="fa-regular fa-paper-plane p-2 cursor-pointer" onClick={handleSendMessage}></i>
             </div>
           </div>
