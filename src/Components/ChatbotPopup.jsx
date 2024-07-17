@@ -1,32 +1,27 @@
 import React, { useState } from 'react';
 import ChatBot from './ChatBot';
-import data from '@emoji-mart/data';
-import Picker from '@emoji-mart/react';
+import Chat from './Chat';
 
 const ChatbotPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([{type: 'text', text: 'Hi there!', sender: 'other', status:new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}]);
+
   const [input, setInput] = useState('');
-  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
 
   const handleSendMessage = () => {
     if (input.trim()) {
-      setMessages([...messages, { text: input, type: 'text' }]);
+      setMessages([...messages, { text: input, type: 'text', sender:'me',status:'sending...'}]);
       setInput('');
     }
   };
 
-  const handleEmojiSelect = (emoji) => {
-    setInput(input + emoji.native);
-    setShowEmojiPicker(false);
-  };
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setMessages([...messages, { text: reader.result, type: 'image' }]);
+        setMessages([...messages, { text: reader.result, type: 'image',sender:'me', status:'sending...'}]);
       };
       reader.readAsDataURL(file);
     }
@@ -46,31 +41,13 @@ const ChatbotPopup = () => {
             </button>
           </div>
           <div className="flex-grow p-4 overflow-auto">
-            {messages.map((message, index) => (
-              <div key={index} className="mb-2">
-                {message.type === 'text' ? (
-                  <div className="bg-gray-200 p-2 rounded">{message.text}</div>
-                ) : (
-                  <img src={message.text} alt="Uploaded" className="max-w-full h-auto rounded" />
-                )}
-              </div>
-            ))}
+            <Chat key={messages} messages={messages}/>
           </div>
-          <div className="p-4 w-full flex items-center space-x-2">
-            {showEmojiPicker && (
-              <div className=' w-5'>
-                <Picker
-                data={data}
-                onEmojiSelect={handleEmojiSelect}
-                className="mr-2"
-              />
-              </div>
-            )}
-            <div className='flex items-center p-2 border border-gray-300 rounded'>
-              <i className="fa-regular fa-face-smile px-1" onClick={() => setShowEmojiPicker(!showEmojiPicker)}></i>
+          <div className="p-4 w-full flex items-center justify-center">
+            <div className='flex w-full items-center p-2 border border-gray-300 rounded-3xl'>
               <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" id="imageUpload"/>
-              <label htmlFor="imageUpload" className="px-2 cursor-pointer">
-                <i className="fa fa-paperclip"></i>
+              <label htmlFor="imageUpload" className="pl-2 pr-4 cursor-pointer">
+                <i className="fa fa-paperclip text-gray-500"></i>
               </label>
               <input type="text" value={input} onChange={(e) => setInput(e.target.value)} className="flex-grow outline-none border-none pr-1" placeholder="Type a message..." />
               <i className="fa-regular fa-paper-plane p-2 cursor-pointer" onClick={handleSendMessage}></i>
@@ -83,5 +60,11 @@ const ChatbotPopup = () => {
     </div>
   );
 };
+const messages = [
+  { type: 'text', text: 'Hello!', sender: 'other' },
+  { type: 'text', text: 'Hi there!', sender: 'me' },
+  { type: 'text', text: 'hello how are you', sender: 'me' },
+  // Add more messages here...
+];
 
 export default ChatbotPopup;
