@@ -1,37 +1,18 @@
-import { useEffect } from 'react';
 import ImageWithModal from './ImageWithModal';
-import { useRef } from 'react';
 
 const Chat = ({ messages }) => {
 
-  const messagesEndRef = useRef(null);
-
-  const scrollToBottom = () => {
-    console.log("this is");
-    console.log(messagesEndRef.current);
-    if (messagesEndRef.current) {
-      console.log("ss");
-      messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
-
-
   return (
-    <div className="w-full ">
+    <div className="w-full">
       {messages.map((message, index) => (
         <div
           key={index}
           className={`mb-3 flex ${
-            message.sender === 'me' ? 'justify-end' : 'justify-start'
+            message.sender === 'me' ? 'justify-end pl-12' : 'justify-start'
           }`}
         >
           <div className="flex flex-col items-end">
-            <div
-              className={`rounded-xl max-w-xs font-[Arial] select-text ${
+            <div className={`rounded-xl max-w-[270px] h-auto font-[Arial] select-text whitespace-pre-wrap break-words ${
                 message.sender === 'me' && message.type === 'text'
                   ? 'p-[9px_20px] bg-[#0f0f20] text-white'
                   : message.sender === 'other' && message.type === 'text'

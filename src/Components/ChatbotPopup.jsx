@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ChatBot from './ChatBot';
 import Chat from './Chat';
 import 'boxicons'
@@ -6,7 +6,8 @@ import avatarImg from '../assets/avatar.webp'
 
 const ChatbotPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState([{type: 'text', text: 'Hi there!', sender: 'other', status:new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}]);
+  const messagesEndRef = useRef(null);
+  const [messages, setMessages] = useState([{type: 'text', text: 'Hi there! how are you ?', sender: 'other', status:new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}]);
 
   const [input, setInput] = useState('');
 
@@ -22,8 +23,6 @@ const ChatbotPopup = () => {
     }
   };
 
-
-
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -35,10 +34,14 @@ const ChatbotPopup = () => {
     }
   };
 
+  useEffect(()=>{
+    messagesEndRef.current?.scrollIntoView();
+  },[messages])
+
   return (
     <div className="fixed bottom-24 right-4 z-[9999]">
       {isOpen ? (
-        <div className={`bg-white border-[2px] rounded-[20px] overflow-hidden flex flex-col shadow-md w-[350px] h-[550px] transition-all`}>  {/*bg-white shadow-lg  flex flex-col*/}
+        <div className={`bg-white border-[2px] rounded-[20px] overflow-hidden flex flex-col shadow-md w-[350px] h-[550px]`}>  {/*bg-white shadow-lg  flex flex-col*/}
           <div className='h-[90px] bg-[#0f0f20] flex items-center justify-between text-white p-4'>
             <div className='flex items-center pl-6'>
               <img src={avatarImg} alt='' className='h-[60px] border-[2px] bg-white rounded-full'></img>
@@ -50,11 +53,12 @@ const ChatbotPopup = () => {
              <div className='cursor-pointer' onClick={() => setIsOpen(false)}> <box-icon name='x' color='white' size='40px'></box-icon></div>
           </div>
 
-          <div className="flex-grow p-4 overflow-auto">
+          <div className="flex-grow p-3 overflow-auto">
             <Chat key={messages} messages={messages}/>
+            <div ref={messagesEndRef}></div>
           </div>
           <div className="px-4 pb-4 bt-1 w-full min-h-16 flex items-center justify-center">
-            <div className='flex w-full h-full items-center p-2 border border-gray-300 rounded-3xl justify-between'>
+            <div className='flex w-full h-full items-center p-2 border-[2px] border-gray-300 rounded-3xl justify-between'>
               <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" id="imageUpload"/>
               <label htmlFor="imageUpload" className="px-2 cursor-pointer">
                 <i className="fa fa-paperclip text-gray-500"></i>
