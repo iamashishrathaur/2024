@@ -38,13 +38,13 @@ const ChatbotPopup = () => {
   return (
     <div className="fixed bottom-24 right-4 z-[9999]">
       {isOpen ? (
-        <div className=" w-[390px] h-[550px] bg-white border-[2px] rounded-[20px] overflow-hidden flex flex-col shadow-md">  {/*bg-white shadow-lg  flex flex-col*/}
-          <div className='h-[100px] bg-[#0f0f20] flex items-center justify-between text-white p-4'>
+        <div className={`bg-white border-[2px] rounded-[20px] overflow-hidden flex flex-col shadow-md w-[350px] h-[550px] transition-all`}>  {/*bg-white shadow-lg  flex flex-col*/}
+          <div className='h-[90px] bg-[#0f0f20] flex items-center justify-between text-white p-4'>
             <div className='flex items-center pl-6'>
-              <img src={avatarImg} alt='' className='h-[70px] border-[2px] bg-white rounded-full'></img>
+              <img src={avatarImg} alt='' className='h-[60px] border-[2px] bg-white rounded-full'></img>
                 <div className='ml-[10px]'>
                   <h3 className='text-base'>Jason Roy</h3>
-                  <p className='text-xs'>Agent <span className='text-[#0f0]'>(Online)</span></p>
+                  <p className='text-xs'>Agent <span className='text-[#0f0]'> (Online)</span></p>
                 </div>        
               </div>
              <div className='cursor-pointer' onClick={() => setIsOpen(false)}> <box-icon name='x' color='white' size='40px'></box-icon></div>
@@ -56,12 +56,11 @@ const ChatbotPopup = () => {
           <div className="px-4 pb-4 bt-1 w-full min-h-16 flex items-center justify-center">
             <div className='flex w-full h-full items-center p-2 border border-gray-300 rounded-3xl justify-between'>
               <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" id="imageUpload"/>
-              <label htmlFor="imageUpload" className="pl-2 pr-2 cursor-pointer">
+              <label htmlFor="imageUpload" className="px-2 cursor-pointer">
                 <i className="fa fa-paperclip text-gray-500"></i>
               </label>
-              <input type="text" value={input} onChange={(e) => setInput(e.target.value)} onKeyUp={handleKeyUp} className="flex outline-none border-none" placeholder="Type a message..." />
-              <div className='cursor-pointer flex'><box-icon name='send' color='rgb(107 114 128)' size='22px' style={{ color: 'blue',}}  onClick={handleSendMessage}></box-icon></div>
-              {/* <i className="fa-regular fa-paper-plane p-2 cursor-pointer" onClick={handleSendMessage}></i> */}
+              <input type="text" value={input} onChange={(e) => setInput(e.target.value)} onKeyUp={handleKeyUp} className="flex flex-grow outline-none border-none" placeholder="Type a message..." />
+              <div className='cursor-pointer flex px-2'><box-icon name='send' color='rgb(107 114 128)' size='22px' style={{ color: 'blue',}}  onClick={handleSendMessage}></box-icon></div>
             </div>
           </div>
         </div>
