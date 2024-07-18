@@ -47,7 +47,7 @@ const ChatbotPopup = () => {
                   <p className='text-xs'>Agent <span className='text-[#0f0]'>(Online)</span></p>
                 </div>        
               </div>
-             <div className='cursor-pointer' onClick={() => setIsOpen(false)}> <box-icon name='x' color='white' size='30px'></box-icon></div>
+             <div className='cursor-pointer' onClick={() => setIsOpen(false)}> <box-icon name='x' color='white' size='40px'></box-icon></div>
           </div>
 
           <div className="flex-grow p-4 overflow-auto">
