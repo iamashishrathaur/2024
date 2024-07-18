@@ -38,7 +38,7 @@ const ChatbotPopup = () => {
   return (
     <div className="fixed bottom-24 right-4 z-[9999]">
       {isOpen ? (
-        <div className=" w-[390px] h-[550px] bg-white border-[rgba(255,225,255,.5)] border-[3px] rounded-[20px] overflow-hidden flex flex-col">  {/*bg-white shadow-lg  flex flex-col*/}
+        <div className=" w-[390px] h-[550px] bg-white border-[2px] rounded-[20px] overflow-hidden flex flex-col shadow-md">  {/*bg-white shadow-lg  flex flex-col*/}
           <div className='h-[100px] bg-[#0f0f20] flex items-center justify-around text-white py-4'>
             <div className='flex items-center'>
               <img src={avatarImg} alt='' className='h-[70px] border-[2px] bg-white rounded-full'></img>
