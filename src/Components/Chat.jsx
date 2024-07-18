@@ -31,11 +31,11 @@ const Chat = ({ messages }) => {
         >
           <div className="flex flex-col items-end">
             <div
-              className={`rounded-2xl max-w-xs font-[Arial] select-text ${
+              className={`rounded-xl max-w-xs font-[Arial] select-text ${
                 message.sender === 'me' && message.type === 'text'
-                  ? 'p-3 bg-blue-500 text-white'
+                  ? 'p-[9px_20px] bg-[#0f0f20] text-white'
                   : message.sender === 'other' && message.type === 'text'
-                  ? 'p-3 bg-gray-200 text-black'
+                  ? 'p-[9px_20px] bg-gray-200 text-black'
                   : ''
               }`}
             >

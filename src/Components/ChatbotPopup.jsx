@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ChatBot from './ChatBot';
 import Chat from './Chat';
 import 'boxicons'
-
+import avatarImg from '../assets/avatar.webp'
 
 const ChatbotPopup = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,21 +38,23 @@ const ChatbotPopup = () => {
   return (
     <div className="fixed bottom-24 right-4 z-[9999]">
       {isOpen ? (
-        <div className=" w-[350px] h-[500px] bg-white shadow-lg rounded-lg flex flex-col">
-          <div className="bg-blue-500 text-white p-4 flex justify-between items-center rounded-t-lg">
-            <h3 className="text-lg">Chatbot</h3>
-            <button
-              className="text-white"
-              onClick={() => setIsOpen(false)}
-            >
-              &#x2715;
-            </button>
+        <div className=" w-[390px] h-[550px] bg-white border-[rgba(255,225,255,.5)] border-[3px] rounded-[20px] overflow-hidden flex flex-col">  {/*bg-white shadow-lg  flex flex-col*/}
+          <div className='h-[100px] bg-[#0f0f20] flex items-center justify-around text-white py-4'>
+            <div className='flex items-center'>
+              <img src={avatarImg} alt='' className='h-[70px] border-[2px] bg-white rounded-full'></img>
+                <div className='ml-[10px]'>
+                  <h3 className='text-base'>Jason Roy</h3>
+                  <p className='text-xs'>Agent <span className='text-[#0f0]'>(Online)</span></p>
+                </div>        
+              </div>
+             <div className='cursor-pointer' onClick={() => setIsOpen(false)}> <box-icon name='x' color='white' size='30px'></box-icon></div>
           </div>
+
           <div className="flex-grow p-4 overflow-auto">
             <Chat key={messages} messages={messages}/>
           </div>
-          <div className="p-4 w-full flex items-center justify-center">
-            <div className='flex w-full items-center p-2 border border-gray-300 rounded-3xl justify-between'>
+          <div className="px-4 pb-4 bt-1 w-full min-h-16 flex items-center justify-center">
+            <div className='flex w-full h-full items-center p-2 border border-gray-300 rounded-3xl justify-between'>
               <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" id="imageUpload"/>
               <label htmlFor="imageUpload" className="pl-2 pr-2 cursor-pointer">
                 <i className="fa fa-paperclip text-gray-500"></i>
