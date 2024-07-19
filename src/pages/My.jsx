@@ -3,7 +3,9 @@ import BottomNavigation from '../Components/BottomNavigation'
 import VIP from '../assets/VIP.webp'
 import Avatar from '../assets/avatar.webp'
 import { useState } from 'react'
+import 'boxicons'
 import INR from '../assets/INR.svg'
+import refreshIcon from '../assets/refresh.png'
 
 const My = () => {
   const [isToast, setIsToast] = useState(false)
@@ -16,7 +18,7 @@ const My = () => {
     setTimeout(() => {
       setIsRotating(false);
       // Place your refresh logic here
-    }, 1000); // Duration of the animation
+    }, 5000); // Duration of the animation
   };
 
   const handleCopy =()=>{
@@ -61,10 +63,10 @@ const My = () => {
                   </div>
 
                   <div className='w-1/6 h-full pl-3'>
-                      <div className='p-[10px_15px] flex justify-center h-full bg-[#b7d0ff] rounded-tr-[.625rem] rounded-br-[.625rem]' onClick={handleRefresh}>
-                        <div className='flex items-center cursor-pointer'>
-                          <i className={`fa fa-arrows-rotate text-lg ${isRotating ? 'rotating' : ''}`}></i>
-                        </div>
+                      <div className='flex justify-center items-center w-full h-full bg-[#b7d0ff] rounded-tr-[.625rem] rounded-br-[.625rem]' onClick={handleRefresh}>
+                        <span className='p-[1px] flex'>
+                         <img src={refreshIcon} className={`h-5 cursor-pointer transition hover:scale-[1.1] ${isRotating ?'rotating':''}`}/>
+                        </span>
                       </div>
                   </div>
               </div>
