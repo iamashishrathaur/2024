@@ -59,7 +59,7 @@ const ChatbotPopup = () => {
           </div>
           <div className="px-4 pb-4 bt-1 w-full min-h-16 flex items-center justify-center">
             <div className='flex w-full h-full items-center p-2 border-[2px] border-gray-300 rounded-3xl justify-between'>
-              <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" id="imageUpload"/>
+              <input type="file" accept="image/*" onChange={handleImageUpload} className="hidden" id="imageUpload" spellCheck="true"/>
               <label htmlFor="imageUpload" className="px-2 cursor-pointer">
                 <i className="fa fa-paperclip text-gray-500"></i>
               </label>
