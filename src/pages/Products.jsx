@@ -4,6 +4,8 @@ import viImage from '../assets/vi.png'
 import airtelImage from '../assets/airtel.avif'
 import bsnlImage from '../assets/bsnl.avif'
 import {FaShoppingCart } from 'react-icons/fa'
+import Header from '../Components/Header'
+// import {lv0,lv1,lv2,lv3,lv4} from '../assets/avif'
 
 const Products = () => {
   const item =[
@@ -14,6 +16,7 @@ const Products = () => {
         cycle:28,
         daily:1.5,
         active:true
+
     },
     {
         name:'airtel',
@@ -37,7 +40,8 @@ const Products = () => {
         image:bsnlImage,
         cycle:30,
         daily:2.5,
-        active:false
+        active:false,
+        level:1
     }
 
 
@@ -46,6 +50,7 @@ const Products = () => {
   return (
 <>
 <div className=''>
+  <Header name={'Products'}/>
 <div className='p-5 pb-60'>
 {item.map((item,index)=>(
    <div key={index} className='bg-white shadow-lg rounded-lg w-full min-h-20 mt-3 flex justify-between'>
