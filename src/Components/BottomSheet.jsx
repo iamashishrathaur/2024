@@ -1,6 +1,25 @@
-import { useState } from 'react';
+import { Button } from '@mui/material';
+import { useEffect } from 'react';
+import { BiCloset } from 'react-icons/bi';
+import { CgClose, CgCloseR } from 'react-icons/cg';
+import { FaShoppingCart } from 'react-icons/fa';
+import { FaX } from 'react-icons/fa6';
 
-const BottomSheet = ({ show, onClose}) => {
+
+const BottomSheet = ({ show, onClose }) => {
+  // Handle overflow of the body when modal is open
+  useEffect(() => {
+    if (show) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto'; // Clean up when unmounting or closing modal
+    };
+  }, [show]);
+
   if (!show) return null;
 
   const handleOutsideClick = (e) => {
@@ -11,18 +30,29 @@ const BottomSheet = ({ show, onClose}) => {
 
   return (
     <div
-      className="bottom-dialog fixed top-0 inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-[99999]"
-      onClick={handleOutsideClick}
+    className="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-[99999]"
+    onClick={handleOutsideClick}
+  >
+    <div
+      className={`bg-white rounded-t-2xl transform transition-all duration-[1500ms] ease-in-out w-full md:max-w-[480px] border-t flex flex-col justify-between ${
+        show ? 'h-1/2' : 'h-0'
+      } self-end`}
+      onClick={(e) => e.stopPropagation()} // Prevents closing when clicking inside the modal
     >
-      <div
-        className={`bg-white p-6 rounded-t-lg transform transition-all duration-[1500ms] ease-in-out w-full md:max-w-[480px] border-t ${
-          show ? 'h-1/2' : ' h-0'
-        } self-end`}
-        onClick={(e) => e.stopPropagation()} // Prevents modal from closing when clicking inside
-      >
-        
+      <div className='w-full h-[60px] flex justify-end items-center'>
+         <CgClose color='rgb(255, 85, 0)' size={'25px'} className='mr-5 cursor-pointer' onClick={onClose}/>
+      </div>
+
+      <div className='w-full px-5 pb-5'>
+      <button style={{ background: 'linear-gradient(135deg, #f50, #fa0)'}}
+                    className='h-10 w-full text-white rounded-full shadow-md z-[99] p-[0px_15px_0px_15px] text-[18px] font-semibold flex justify-center items-center gap-2' onClick={()=>{}}>
+                    Invest Now <strong>120</strong>
+       </button>
       </div>
     </div>
+  </div>
+
+
   );
 };
 
