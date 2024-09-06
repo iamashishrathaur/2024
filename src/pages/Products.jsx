@@ -5,15 +5,17 @@ import airtelImage from '../assets/airtel.avif'
 import bsnlImage from '../assets/bsnl.avif'
 import {FaShoppingCart } from 'react-icons/fa'
 import Header from '../Components/Header'
-// import {lv0,lv1,lv2,lv3,lv4} from '../assets/avif'
 import lv0 from '../assets/lv0.svg';
 import lv1 from '../assets/lv1.svg';
 import lv2 from '../assets/lv2.svg';
 import lv3 from '../assets/lv3.svg';
 import lv4 from '../assets/lv4.svg';
+import BottomSheet from '../Components/BottomSheet'
+import { useState } from 'react'
 
 
 const Products = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const item = [
     {
       name: 'Data-A01',
@@ -56,11 +58,14 @@ const Products = () => {
       total:48
     }
   ];
+  const closeModal = () => setIsOpen(false);
+
   
   return (
     <>
       <div>
         <Header name={'Products'} />
+        <BottomSheet show={isOpen} onClose={closeModal}/>
         <div className='p-5 pb-60'>
           {item.map((item, index) => (
             <div key={index} className='bg-white shadow-lg rounded-lg w-full min-h-20 mt-3 flex flex-col justify-between'>
@@ -113,7 +118,7 @@ const Products = () => {
                         ? { background: 'linear-gradient(135deg, #f50, #fa0)' }
                         : { background: 'rgb(107 114 128)', cursor: 'default' }
                     }
-                    className='h-7 w-32 text-white rounded-full shadow-md z-[999] p-[0px_15px_0px_15px] text-[14px] font-semibold flex justify-center items-center gap-2'>
+                    className='h-7 w-32 text-white rounded-full shadow-md z-[99] p-[0px_15px_0px_15px] text-[14px] font-semibold flex justify-center items-center gap-2' onClick={item.active ? ()=>setIsOpen(true):""}>
                      {item.active ?  <><FaShoppingCart /> Buy</>: 'Pre-sale'}
                   </button>
                 </div>
@@ -121,8 +126,10 @@ const Products = () => {
             </div>
           ))}
         </div>
+        
       </div>
       <BottomNavigation />
+     
     </>
   );
 }
