@@ -15,7 +15,7 @@ const BottomSheet = ({ show, onClose}) => {
       onClick={handleOutsideClick}
     >
       <div
-        className={`bg-white p-6 rounded-t-lg transform transition-all duration-[1500ms] ease-in-out sm:w-full md:max-w-[480px] border-t ${
+        className={`bg-white p-6 rounded-t-lg transform transition-all duration-[1500ms] ease-in-out w-full md:max-w-[480px] border-t ${
           show ? 'h-1/2' : ' h-0'
         } self-end`}
         onClick={(e) => e.stopPropagation()} // Prevents modal from closing when clicking inside
