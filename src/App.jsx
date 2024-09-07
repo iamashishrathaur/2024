@@ -7,6 +7,7 @@ import Products from './pages/Products'
 import My from './pages/My'
 import ChatBot from './Components/ChatBot'
 import ChatbotPopup from './Components/ChatbotPopup'
+import Transaction from './pages/Transaction'
 
 function App() {
 
@@ -22,6 +23,10 @@ function App() {
     {
       element:<My/>,
       path:'/my'
+    },
+    {
+      element:<Transaction/>,
+      path:'/transaction'
     },
 
   ])

@@ -1,9 +1,6 @@
-import { Button } from '@mui/material';
 import { useEffect } from 'react';
-import { BiCloset } from 'react-icons/bi';
-import { CgClose, CgCloseR } from 'react-icons/cg';
-import { FaShoppingCart } from 'react-icons/fa';
-import { FaX } from 'react-icons/fa6';
+import { CgClose } from 'react-icons/cg';
+
 
 
 const BottomSheet = ({ show, onClose }) => {
@@ -46,7 +43,7 @@ const BottomSheet = ({ show, onClose }) => {
       <div className='w-full px-5 pb-5'>
       <button style={{ background: 'linear-gradient(135deg, #f50, #fa0)'}}
                     className='h-10 w-full text-white rounded-full shadow-md z-[99] p-[0px_15px_0px_15px] text-[18px] font-semibold flex justify-center items-center gap-2' onClick={()=>{}}>
-                    Invest Now <strong>120</strong>
+                    Invest Now <strong>₹120</strong>
        </button>
       </div>
     </div>

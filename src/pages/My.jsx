@@ -6,10 +6,13 @@ import { useState } from 'react';
 import 'boxicons';
 import INR from '../assets/INR.svg';
 import refreshIcon from '../assets/refresh.png';
+import { useNavigate } from 'react-router-dom';
+
 
 const My = () => {
   const [isToast, setIsToast] = useState(false);
   const [isRotating, setIsRotating] = useState(false);
+  const navigate = useNavigate();
 
   const handleRefresh = () => {
     setIsRotating(true);
@@ -99,8 +102,8 @@ const My = () => {
 
           <div className='bg-white w-full min-h-64 rounded-xl shadow-lg text-[#333] text-sm mt-5'>
             {[
-              { icon: 'fa-pen-nib', color: 'text-red-500', label: 'My Order' },
-              { icon: 'fa-clipboard-list', color: 'text-teal-400', label: 'Transaction' },
+              { icon: 'fa-pen-nib', color: 'text-red-500', label: 'My Order', navigate:'myorder'},
+              { icon: 'fa-clipboard-list', color: 'text-teal-400', label: 'Transaction',navigate:'transaction' },
               { icon: 'fa-users', color: 'text-cyan-400', label: 'My Team' },
               { icon: 'fa-credit-card', color: 'text-blue-400', label: 'Bank Account' },
               { icon: 'fa-mobile-screen', color: 'text-emerald-400', label: 'Download APP' },
@@ -108,7 +111,7 @@ const My = () => {
               { icon: 'fa-shield-halved', color: 'text-red-400', label: 'Withdraw Password' },
               { icon: 'fa-circle-info', color: 'text-green-400', label: 'About Us' },
             ].map((item, index) => (
-              <div key={index}>
+              <div key={index} onClick={()=>navigate('/'+item.navigate)}>
                 <div className='flex justify-between items-center p-4 px-5'>
                   <div className='flex items-center cursor-pointer'>
                     <i className={`fas ${item.icon} ${item.color} text-xl`}></i>
