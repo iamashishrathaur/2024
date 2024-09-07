@@ -32,7 +32,7 @@ const Transaction = () => {
     <div className='min-h-[100vh] pb-60'>
       <Header isBackPress={true} name={'Transaction Records'} />
       <div className='w-full flex flex-col'>
-        <div className='w-[90%] flex gap-2 flex-wrap p-5'>
+        <div className='w-[90%] flex gap-2 px-2 py-5'>
           <div className='w-[30%] bg-white shadow-md rounded-full flex items-center justify-center'>
             <CgCalendarNext color='red' />
           </div>
@@ -53,19 +53,19 @@ const Transaction = () => {
 
           <div  className='flex-1 flex items-center justify-center cursor-pointer' onClick={() => handleTabClick('all')}>
             <span style={{ background: isActiveIndex === 'all' ? getBackgroundGradient('all') : 'none',}}
-              className={`w-full flex items-center justify-center py-1 rounded-full shadow-sm ${isActiveIndex === 'all' ? 'text-white' : 'text-black'} border`}>
+              className={`w-full flex items-center justify-center py-[8px] rounded-full shadow-sm ${isActiveIndex === 'all' ? 'text-white' : 'text-black'} border`}>
               All types
             </span>
           </div>
           <div className='flex-1 flex items-center justify-center cursor-pointer' onClick={() => handleTabClick('withdrawals')}>
             <span style={{ background: isActiveIndex === 'withdrawals' ? getBackgroundGradient('withdrawals') : 'none',}}
-              className={`w-full flex items-center justify-center py-1 rounded-full shadow-sm ${isActiveIndex === 'withdrawals' ? 'text-white' : 'text-black'} border`} >
+              className={`w-full flex items-center justify-center py-[8px] rounded-full shadow-sm ${isActiveIndex === 'withdrawals' ? 'text-white' : 'text-black'} border`} >
               Withdrawals
             </span>
           </div>
           <div className='flex-1 flex items-center justify-center cursor-pointer' onClick={() => handleTabClick('recharge')}>
             <span style={{ background: isActiveIndex === 'recharge' ? getBackgroundGradient('recharge') : 'none', }}
-              className={`w-full flex items-center justify-center py-1 rounded-full shadow-sm ${isActiveIndex === 'recharge' ? 'text-white' : 'text-black'} border`}>
+              className={`w-full flex items-center justify-center py-[8px] rounded-full shadow-sm ${isActiveIndex === 'recharge' ? 'text-white' : 'text-black'} border`}>
               Recharge
             </span>
           </div>
