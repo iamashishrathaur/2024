@@ -85,13 +85,13 @@ const My = () => {
               {[
                 { icon: 'fa-piggy-bank', color: '#ff7cbe', label: 'Recharge' },
                 { icon: 'fa-building-columns', color: '#60cfff', label: 'Withdraw' },
-                { icon: 'fa-money-bill-trend-up', color: '#fdb953', label: 'Transaction' },
+                { icon: 'fa-money-bill-trend-up', color: '#fdb953', label: 'Transaction', navigate:'transaction' },
                 { icon: 'fa-people-group', color: '#42e1cc', label: 'Team' },
               ].map((item, index) => (
                 <div key={index} className='w-1/4 flex flex-col items-center'>
                   <div
                     className={`bg-[${item.color}] h-10 w-10 rounded-lg z-20 shadow-sm flex items-center justify-center cursor-pointer`}
-                  >
+                  onClick={()=>navigate('/'+item.navigate)}>
                     <i className={`fa ${item.icon} text-white text-xl`}></i>
                   </div>
                   <div className='mt-1'>{item.label}</div>
@@ -105,7 +105,7 @@ const My = () => {
               { icon: 'fa-pen-nib', color: 'text-red-500', label: 'My Order', navigate:'myorder'},
               { icon: 'fa-clipboard-list', color: 'text-teal-400', label: 'Transaction',navigate:'transaction' },
               { icon: 'fa-users', color: 'text-cyan-400', label: 'My Team' },
-              { icon: 'fa-credit-card', color: 'text-blue-400', label: 'Bank Account' },
+              { icon: 'fa-credit-card', color: 'text-blue-400', label: 'Bank Account', navigate:'bank' },
               { icon: 'fa-mobile-screen', color: 'text-emerald-400', label: 'Download APP' },
               { icon: 'fa-unlock-keyhole', color: 'text-fuchsia-400', label: 'Password' },
               { icon: 'fa-shield-halved', color: 'text-red-400', label: 'Withdraw Password' },
