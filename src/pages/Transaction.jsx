@@ -49,52 +49,30 @@ const Transaction = () => {
             <span className='mb-[2px]'>search</span>
           </div>
         </div>
-        <div className='w-full bg-white shadow-sm h-10 flex flex-wrap text-sm'>
-          <div
-            className='w-1/3 px-4 flex items-center justify-center cursor-pointer'
-            onClick={() => handleTabClick('all')}
-          >
-            <span
-              style={{
-                background: isActiveIndex === 'all' ? getBackgroundGradient('all') : 'none',
-              }}
-              className={`w-full flex items-center justify-center py-1 rounded-full shadow-sm ${
-                isActiveIndex === 'all' ? 'text-white' : 'text-black'
-              }`}
-            >
+        <div className='w-full bg-white shadow-sm  flex flex-wrap text-sm gap-2 p-2'>
+
+          <div  className='flex-1 flex items-center justify-center cursor-pointer' onClick={() => handleTabClick('all')}>
+            <span style={{ background: isActiveIndex === 'all' ? getBackgroundGradient('all') : 'none',}}
+              className={`w-full flex items-center justify-center py-1 rounded-full shadow-sm ${isActiveIndex === 'all' ? 'text-white' : 'text-black'}`}>
               All types
             </span>
           </div>
-          <div
-            className='w-1/3 flex items-center justify-center cursor-pointer'
-            onClick={() => handleTabClick('withdrawals')}
-          >
-            <span
-              style={{
-                background: isActiveIndex === 'withdrawals' ? getBackgroundGradient('withdrawals') : 'none',
-              }}
-              className={`w-full flex items-center justify-center py-1 rounded-full shadow-sm ${
-                isActiveIndex === 'withdrawals' ? 'text-white' : 'text-black'
-              }`}
-            >
+          <div className='flex-1 flex items-center justify-center cursor-pointer' onClick={() => handleTabClick('withdrawals')}>
+            <span style={{ background: isActiveIndex === 'withdrawals' ? getBackgroundGradient('withdrawals') : 'none',}}
+              className={`w-full flex items-center justify-center py-1 rounded-full shadow-sm ${isActiveIndex === 'withdrawals' ? 'text-white' : 'text-black'}`} >
               Withdrawals
             </span>
           </div>
-          <div
-            className='w-1/3 flex items-center justify-center cursor-pointer'
-            onClick={() => handleTabClick('recharge')}
-          >
-            <span
-              style={{
-                background: isActiveIndex === 'recharge' ? getBackgroundGradient('recharge') : 'none',
-              }}
-              className={`w-full flex items-center justify-center py-1 rounded-full shadow-sm ${
-                isActiveIndex === 'recharge' ? 'text-white' : 'text-black'
-              }`}
-            >
+          <div className='flex-1 flex items-center justify-center cursor-pointer' onClick={() => handleTabClick('recharge')}>
+            <span style={{ background: isActiveIndex === 'recharge' ? getBackgroundGradient('recharge') : 'none', }}
+              className={`w-full flex items-center justify-center py-1 rounded-full shadow-sm ${isActiveIndex === 'recharge' ? 'text-white' : 'text-black'}`}>
               Recharge
             </span>
           </div>
+        </div>
+
+        <div className='flex items-center justify-center p-5'>
+             <small>There is no record on this page</small>
         </div>
       </div>
     </div>
